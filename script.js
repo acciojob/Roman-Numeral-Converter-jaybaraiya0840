@@ -19,18 +19,20 @@ function convertToRoman(num) {
 
 	 let rnumber = '';
 
-    for (let i = 0; i < obj.length; i++) {
-        let symbol = obj[i][0];
-        let value = obj[i][1];
+       let romanNumeral = '';
 
-        while (num >= value) {
-           rnumber =rnumber + symbol;
-            num =  num -value;
+    for (let i = 0; i < obj.length; i++) {
+        const symbol = obj[i][0];
+        const value = obj[i][1];
+
+        for (; num >= value; num -= value) {
+            romanNumeral += symbol;
         }
     }
 
-    return rnumber;
+    return romanNumeral;
 }
+
 
 }
 	

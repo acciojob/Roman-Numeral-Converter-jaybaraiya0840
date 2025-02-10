@@ -20,12 +20,12 @@ function convertToRoman(num) {
 	 let rnumber = '';
 
     for (let i = 0; i < obj.length; i++) {
-        const symbol = obj[i][0];
-        const value = obj[i][1];
+        let symbol = obj[i][0];
+        let value = obj[i][1];
 
         while (num >= value) {
-           rnumber += symbol;
-            num -= value;
+           rnumber =rnumber + symbol;
+            num =  num -value;
         }
     }
 
